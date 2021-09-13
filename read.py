@@ -6,8 +6,14 @@ with open('reviews.txt','r') as f:
 		count += 1
 		if count % 1000 == 0:
 			print(len(data))
-print(len(data))
+print('檔案讀取完了，總共有',len(data),'筆資料')
 
-print(data[0])
-print('---------------')
-print(data[1])
+average = 0
+for d in data:
+	average += len(d)
+	print(average)
+
+average = average/ len(data)
+print('留言的平均長度為',average)
+
+
